@@ -1,0 +1,46 @@
+/* Charte des visuels LinkedIn Neotech Solutions : bleu nuit, or, crème ; Lora (titres) et Inter (texte). */
+@font-face{font-family:Lora;font-weight:500;src:url(fonts/lora-latin-500-normal.woff2)}
+@font-face{font-family:Lora;font-weight:500;font-style:italic;src:url(fonts/lora-latin-500-italic.woff2)}
+@font-face{font-family:Lora;font-weight:600;src:url(fonts/lora-latin-600-normal.woff2)}
+@font-face{font-family:Inter;font-weight:400;src:url(fonts/inter-latin-400-normal.woff2)}
+@font-face{font-family:Inter;font-weight:500;src:url(fonts/inter-latin-500-normal.woff2)}
+@font-face{font-family:Inter;font-weight:600;src:url(fonts/inter-latin-600-normal.woff2)}
+:root{--nuit:#0D1B2A;--nuit2:#102338;--or:#C9A84C;--or-clair:#E8C97A;--or-fonce:#9A7A32;--creme:#F5F0E8;--gris:#B9C3D1;--ink:#1d2633;--muted:#5d6878;--filet:#e3ddd0}
+html,body{margin:0;background:#888}
+body{display:flex;flex-direction:column;gap:40px;padding:40px;width:max-content}
+.slide{position:relative;width:1080px;height:1350px;overflow:hidden;box-sizing:border-box;padding:120px 100px;font-family:Inter}
+.nuit{color:var(--creme);background:
+  radial-gradient(700px 520px at 900px 220px,rgba(201,168,76,.14),transparent 70%),
+  radial-gradient(900px 700px at 200px 1250px,rgba(46,74,110,.5),transparent 70%),
+  linear-gradient(165deg,#0A1522,var(--nuit) 50%,var(--nuit2))}
+.creme{color:var(--ink);background:var(--creme)}
+.kicker{display:flex;align-items:center;gap:18px;font:600 24px/1 Inter;letter-spacing:.24em;text-transform:uppercase;color:var(--or)}
+.kicker:before{content:"";width:56px;height:2px;background:currentColor}
+.creme .kicker{color:var(--or-fonce)}
+h1{font:500 92px/1.06 Lora,serif;margin:40px 0 0;letter-spacing:-.01em;text-wrap:balance}
+h2{font:500 62px/1.12 Lora,serif;margin:0;text-wrap:balance}
+h1 em,h2 em{font-style:italic;color:var(--or-clair)}
+.creme h1 em,.creme h2 em{color:var(--or-fonce)}
+.filet{width:120px;height:2px;background:var(--or);margin:56px 0}
+p{font-size:38px;line-height:1.45;margin:0 0 24px}
+.nuit p{color:var(--gris)}
+.nuit p b{color:var(--creme);font-weight:600}
+.creme p{color:var(--muted)}
+.creme p b{color:var(--ink);font-weight:600}
+.chiffre{font:500 230px/1 Lora,serif;color:var(--or-clair);letter-spacing:-.02em}
+.creme .chiffre{color:var(--or-fonce)}
+ol,ul{margin:0;padding:0;list-style:none;counter-reset:n}
+li{position:relative;font-size:38px;line-height:1.38;padding:0 0 34px 96px}
+ol li:before{counter-increment:n;content:counter(n);position:absolute;left:0;top:-6px;width:64px;height:64px;border-radius:50%;border:2px solid var(--or);color:var(--or-clair);font:500 34px/60px Lora,serif;text-align:center}
+.creme ol li:before{color:var(--or-fonce)}
+ul li:before{content:"";position:absolute;left:22px;top:20px;width:14px;height:14px;transform:rotate(45deg);background:var(--or)}
+.encart{border:1.5px solid rgba(201,168,76,.55);border-radius:6px;padding:40px 46px;background:rgba(255,255,255,.04)}
+.creme .encart{background:#fff;border-color:var(--filet)}
+.source{position:absolute;left:100px;right:100px;bottom:178px;font-size:22px;line-height:1.4;color:var(--muted)}
+.nuit .source{color:#7d8aa0}
+.pied{position:absolute;left:100px;right:100px;bottom:80px;display:flex;align-items:center;justify-content:space-between;padding-top:30px;border-top:1px solid rgba(201,168,76,.35)}
+.marque{display:flex;align-items:center;gap:18px;font:600 32px/1 Lora,serif;letter-spacing:.01em}
+.marque img{width:64px;height:64px;border-radius:10px}
+.contact{font:600 24px/1 Inter;letter-spacing:.06em;color:var(--or)}
+.creme .contact{color:var(--or-fonce)}
+.grain{position:absolute;inset:0;pointer-events:none;opacity:.05;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/></filter><rect width='160' height='160' filter='url(%23n)'/></svg>")}

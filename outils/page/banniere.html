@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<style>
+@font-face { font-family: Lora; src: url(../linkedin/fonts/lora-latin-500-normal.woff2); font-weight: 500; }
+@font-face { font-family: Lora; src: url(../linkedin/fonts/lora-latin-500-italic.woff2); font-weight: 500; font-style: italic; }
+@font-face { font-family: Inter; src: url(../linkedin/fonts/inter-latin-400-normal.woff2); font-weight: 400; }
+@font-face { font-family: Inter; src: url(../linkedin/fonts/inter-latin-500-normal.woff2); font-weight: 500; }
+@font-face { font-family: Inter; src: url(../linkedin/fonts/inter-latin-600-normal.woff2); font-weight: 600; }
+* { margin: 0; box-sizing: border-box; }
+body { width: 1512px; height: 256px; overflow: hidden; background: #0D1B2A; }
+.b { position: relative; width: 1512px; height: 256px; overflow: hidden;
+  background:
+    radial-gradient(520px 300px at 1240px 120px, rgba(201,168,76,.16), transparent 70%),
+    radial-gradient(700px 380px at 820px 300px, rgba(46,74,110,.45), transparent 70%),
+    linear-gradient(100deg, #0A1522 0%, #0D1B2A 45%, #102338 100%); }
+svg.circuit { position: absolute; inset: 0; }
+.txt { position: absolute; left: 610px; top: 0; height: 256px; width: 520px; display: flex; flex-direction: column; justify-content: center; }
+.k { font: 600 13px/1 Inter; letter-spacing: .26em; text-transform: uppercase; color: #C9A84C; display: flex; align-items: center; gap: 14px; }
+.k::before { content: ""; width: 34px; height: 1px; background: #C9A84C; }
+h1 { margin-top: 14px; font: 500 46px/1.06 Lora, serif; color: #F5F0E8; letter-spacing: -.005em; }
+h1 em { font-style: italic; color: #E8C97A; }
+.s { margin-top: 16px; font: 600 15px/1 Inter; letter-spacing: .18em; text-transform: uppercase; color: #C9A84C; }
+.s b { font-weight: 600; color: #F5F0E8; }
+.s .dot { color: #C9A84C; padding: 0 8px; }
+.grain { position: absolute; inset: 0; opacity: .05; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/></filter><rect width='160' height='160' filter='url(%23n)'/></svg>"); }
+</style></head><body>
+<div class="b">
+  <svg class="circuit" viewBox="0 0 1512 256" fill="none" stroke-linecap="round">
+    <defs>
+      <linearGradient id="g" x1="1" x2="0"><stop offset="0" stop-color="#E8C97A" stop-opacity=".55"/><stop offset="1" stop-color="#C9A84C" stop-opacity="0"/></linearGradient>
+    </defs>
+    <g stroke="url(#g)" stroke-width="1.2">
+      <path d="M1512 40 H1400 C1360 40 1350 70 1310 70 H1190"/>
+      <path d="M1512 92 H1440 C1405 92 1395 118 1360 118 H1250 C1225 118 1215 104 1190 104"/>
+      <path d="M1512 150 H1420 C1390 150 1380 176 1345 176 H1230"/>
+      <path d="M1512 206 H1460 C1430 206 1420 226 1390 226 H1300 C1275 226 1265 214 1240 214"/>
+      <path d="M1470 0 V22 C1470 40 1450 46 1440 58 L1420 82"/>
+      <path d="M1380 256 V240 C1380 222 1362 214 1350 204 L1330 188"/>
+    </g>
+    <g fill="#E8C97A">
+      <circle cx="1190" cy="70" r="3"/><circle cx="1190" cy="104" r="3"/><circle cx="1230" cy="176" r="3"/>
+      <circle cx="1240" cy="214" r="3"/><circle cx="1420" cy="82" r="2.5"/><circle cx="1330" cy="188" r="2.5"/>
+      <circle cx="1310" cy="70" r="1.8" opacity=".7"/><circle cx="1360" cy="118" r="1.8" opacity=".7"/><circle cx="1345" cy="176" r="1.8" opacity=".7"/>
+    </g>
+    <g fill="#E8C97A" opacity=".18"><circle cx="1190" cy="70" r="9"/><circle cx="1190" cy="104" r="9"/><circle cx="1230" cy="176" r="9"/><circle cx="1240" cy="214" r="9"/></g>
+  </svg>
+  <div class="txt">
+    <h1>Moins d’administratif,<br><em>plus de droit.</em></h1>
+    <p class="s">NeoMail · NeoVoice · NeoDesk</p>
+  </div>
+  <div class="grain"></div>
+</div>
+</body></html>
