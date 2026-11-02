@@ -1,0 +1,18 @@
+/* Animations des vidéos LinkedIn. Chaque élément animé reçoit une classe et un délai --d (en secondes) :
+   <h1 class="monte" style="--d:.4s">…</h1>. Durée par défaut 0,7 s (--t pour la changer).
+   .fondu / .monte / .gauche / .zoom : entrée ; .sort : sortie (avec --d = l'instant de sortie) ;
+   .trace : un filet qui se dessine de gauche à droite ; .compteur : un chiffre qui apparaît en grossissant ;
+   .scene : un bloc plein écran (contenu centré verticalement) qui entre en fondu à --d et ressort à --f.
+   Accroche lisible dès la 1re image : la première scène et son titre avec --d:-1s (déjà entrés à 0 s). */
+.fondu,.monte,.gauche,.zoom,.trace,.compteur{animation-duration:var(--t,.7s);animation-delay:var(--d,0s);animation-fill-mode:both;animation-timing-function:cubic-bezier(.2,.7,.2,1)}
+.fondu{animation-name:k-fondu}.monte{animation-name:k-monte}.gauche{animation-name:k-gauche}.zoom{animation-name:k-zoom}
+.trace{animation-name:k-trace;transform-origin:left center}.compteur{animation-name:k-compteur}
+.sort{animation:k-sort .5s var(--d,0s) both ease-in}
+.scene{position:absolute;inset:0;padding:inherit;padding-bottom:220px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;animation:k-fondu .45s var(--d,0s) both,k-sort .45s var(--f,999s) forwards ease-in}
+@keyframes k-fondu{from{opacity:0}to{opacity:1}}
+@keyframes k-monte{from{opacity:0;transform:translateY(50px)}to{opacity:1;transform:none}}
+@keyframes k-gauche{from{opacity:0;transform:translateX(-60px)}to{opacity:1;transform:none}}
+@keyframes k-zoom{from{opacity:0;transform:scale(.88)}to{opacity:1;transform:none}}
+@keyframes k-trace{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes k-compteur{0%{opacity:0;transform:scale(.6)}70%{opacity:1;transform:scale(1.06)}100%{transform:scale(1)}}
+@keyframes k-sort{from{opacity:1}to{opacity:0;visibility:hidden}}
