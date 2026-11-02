@@ -24,3 +24,4 @@ Une petite vidéo animée toutes les 2 semaines, à la place d'un visuel fixe, s
 - Une page par vidéo dans `semaines/AAAA-MM-JJ/` (avec `<link rel="stylesheet" href="../../anim.css">`).
 - Exemple validé : voir la page `exemple-video-*.html` de ce dossier.
 - Dans Metricool : `media` = l'adresse publique du MP4 (`https://celine06800.github.io/<dépôt>/linkedin/<fichier>.mp4`), `linkedinData {"type":"post"}`.
+- Lisibilité : texte courant à 46 px minimum et en clair (blanc ou crème), jamais de petit texte rosé ou grisé ; deux scènes ne se chevauchent jamais (la suivante entre 0,5 s après la sortie de la précédente) ; pas de césure sur un trait d'union (entourer « êtes-vous ? » d'un <span style="white-space:nowrap">).
